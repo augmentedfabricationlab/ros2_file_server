@@ -11,6 +11,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(ament_index_cpp REQUIRED)
 
 # Add message and service dependencies
 set(msg_dependencies
@@ -33,6 +34,7 @@ add_executable(file_server2_node src/file_server.cpp)
 ament_target_dependencies(file_server2_node
   rclcpp
   std_msgs
+  ament_index_cpp
 )
 
 # Get the typesupport targets
